@@ -1,4 +1,4 @@
-name: Auto Merge Minor Updates
+name: Auto Merge Major Updates
 
 on:
   pull_request_target:
