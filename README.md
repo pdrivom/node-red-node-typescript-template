@@ -2,6 +2,16 @@
 
 This is a quick-start template repository for creating new Node-RED node sets in TypeScript.
 
+> Consult Node-RED [Documentation](https://nodered.org/docs/creating-nodes/) for further info.
+
+## Supported and tested versions
+
+| Node Version | Node-RED version             |
+| ------------ | ---------------------------- |
+| 20.x         | Node-RED 3.x or earlier only |
+| 18.x         | Node-RED 3.x or earlier only |
+| 16.x         | Node-RED 3.x or earlier only |
+
 ## Project Structure
 
 ```
@@ -39,7 +49,7 @@ node-red-node-typescript-starter/
 
 ## Getting Started
 
-1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage, then clone your new repo.
+1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage.
 2. This project is designed to work with `yarn`. If you don't have `yarn` installed, you can install it with `npm install -g yarn`.
 3. Install dependencies: `yarn install`.
 
@@ -89,32 +99,16 @@ Create a production build:
 yarn build
 ```
 
-## Testing Node Set in Node-RED
-
-Once you have created a basic node module as described above, you can install it into your Node-RED runtime.
-
-To test a node module locally the npm install <folder> command can be used. This allows you to develop the node in a local directory and have it linked into a local node-red install during development.
-
-In your node-red user directory, typically `~/.node-red`, run:
+## Test on local Node-RED installation (docker)
 
 ```
-npm install <location of node module>
+yarn dev:docker
 ```
 
-For example, on Mac OS or Linux, if your node is located at `~/dev/node-red-contrib-<example-lower-case>` you would do the following:
+## Validate Node
 
 ```
-cd ~/.node-red
-npm install ~/dev/node-red-contrib-example-lower-case
+yarn validate
 ```
 
-On Windows you would do:
-
-```
-cd C:\Users\my_name\.node_red
-npm install C:\Users\my_name\Documents\GitHub\node-red-contrib-<example-lower-case<>
-```
-
-This creates a symbolic link to your node module project directory in ~/.node-red/node_modules so that Node-RED will discover the node when it starts. Any changes to the node’s file can be picked up by simply restarting Node-RED. On Windows, again, using npm 5.x or greater:
-
-> Note : npm will automatically add an entry for your module in the package.json file located in your user directory. If you don't want it to do this, use the --no-save option to the npm install command.
+## [Publishing on npm](https://docs.npmjs.com/cli/v10/using-npm/developers)

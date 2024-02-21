@@ -27,8 +27,14 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Build Docker image
+        run: yarn build:docker
+
       - name: Build
         run: yarn build
-          
+      
       - name: Test
         run: yarn test
+
+      - name: Validate
+        run: yarn validate

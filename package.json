@@ -1,8 +1,11 @@
 {
-  "name": "node-red-contrib-MY_NODESET_NAME",
-  "type": "module",
-  "version": "0.2.3",
-  "description": "Description of the node set here",
+  "name": "@odt/typescript-template",
+  "version": "0.3.0",
+  "description": "<Description of the node set here>",
+  "repository": "https://github.com/pdrivom/node-red-node-typescript-template",
+  "engines": {
+  "node": "^16 || ^18 || ^20"
+  },
   "scripts": {
     "add-node": "node ./utils/add-node.cjs",
     "remove-node": "node ./utils/remove-node.cjs",
@@ -12,15 +15,20 @@
     "build:runtime": "tsc -p tsconfig.runtime.json",
     "build:runtime:watch": "tsc -p tsconfig.runtime.watch.json --watch --preserveWatchOutput",
     "build": "rm -rf dist && yarn copy && yarn build:editor && yarn build:runtime",
+    "build:docker": "docker compose build",
     "test": "jest --forceExit --detectOpenHandles --colors",
     "test:watch": "jest --forceExit --detectOpenHandles --watchAll",
     "dev": "rm -rf dist && yarn copy && concurrently --kill-others --names 'COPY,EDITOR,RUNTIME,TEST' --prefix '({name})' --prefix-colors 'yellow.bold,cyan.bold,greenBright.bold,magenta.bold' 'onchange -v \"src/**/*.png\" \"src/**/*.svg\" -- yarn copy' 'yarn build:editor:watch' 'yarn build:runtime:watch' 'sleep 10; yarn test:watch'",
+    "dev:docker": "docker compose up --build",
     "lint": "prettier --ignore-path .eslintignore --check '**/*.{js,ts,md}'; eslint --ext .js,.ts .",
-    "lint:fix": "prettier --ignore-path .eslintignore --write '**/*.{js,ts,md}'; eslint --ext .js,.ts . --fix"
+    "lint:fix": "prettier --ignore-path .eslintignore --write '**/*.{js,ts,md}'; eslint --ext .js,.ts . --fix",
+    "validate": "node-red-dev validate"
   },
-  "author": "Alex Kaul",
+  "author": "Pedro Marques",
   "license": "MIT",
+  "keywords": [ "node-red" ],
   "node-red": {
+    "version": ">=3.0.0",
     "nodes": {
       "transform-text": "./dist/nodes/transform-text/transform-text.js"
     }
@@ -49,6 +57,7 @@
     "jest": "^29.7.0",
     "mustache": "^4.2.0",
     "node-red": "^3.1.5",
+    "node-red-dev": "^0.1.6",
     "node-red-node-test-helper": "^0.3.3",
     "onchange": "^7.1.0",
     "pre-commit": "^1.2.2",
