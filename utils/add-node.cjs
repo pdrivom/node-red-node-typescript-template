@@ -1,20 +1,15 @@
 const { red, green, bold } = require("colorette");
 const mustache = require("mustache");
-const fs = require("fs");
-const { COPYFILE_EXCL } = fs.constants;
-const {
-  readdir,
-  mkdir,
-  copyFile,
-  readFile,
-  writeFile,
-} = require("fs").promises;
+const fs = require("fs").promises;
 const path = require("path");
+
+const { COPYFILE_EXCL } = fs.constants;
+const { readdir, mkdir, copyFile, readFile, writeFile } = fs;
 
 // get args
 if (!process.argv[2]) {
   console.log(red(`Node type not specified`));
-  return;
+  process.exit(1);
 }
 const nodeTypeInKebabCase = process.argv[2].toLowerCase();
 const nodeTemplate = process.argv[3] || "blank";
@@ -86,12 +81,23 @@ async function generateFiles(fromDir, toDir) {
 
 async function addNodeToPackageJson() {
   const pkgJsonPath = path.join(__dirname, "..", "package.json");
-  const pkgJsonData = JSON.parse(await readFile(pkgJsonPath, "utf8"));
-  pkgJsonData["node-red"].nodes[
-    nodeTypeInKebabCase
-  ] = `./dist/nodes/${nodeTypeInKebabCase}/${nodeTypeInKebabCase}.js`;
-  await writeFile(pkgJsonPath, JSON.stringify(pkgJsonData, null, 2), "utf8");
-  console.log(green(`Added ${bold(nodeTypeInKebabCase)} to package.json`));
+  console.log(`Package.json path: ${pkgJsonPath}`); // Debugging path
+
+  try {
+    const pkgJsonData = JSON.parse(await fs.readFile(pkgJsonPath, "utf8"));
+    console.log(`Current package.json data: ${JSON.stringify(pkgJsonData)}`); // Debugging read data
+
+    if (!pkgJsonData["node-red"]) {
+      pkgJsonData["node-red"] = { nodes: {} };
+    }
+
+    pkgJsonData["node-red"].nodes[nodeTypeInKebabCase] = `./dist/nodes/${nodeTypeInKebabCase}/${nodeTypeInKebabCase}.js`;
+
+    await fs.writeFile(pkgJsonPath, JSON.stringify(pkgJsonData, null, 2), "utf8");
+    console.log(`Added ${nodeTypeInKebabCase} to package.json successfully.`);
+  } catch (error) {
+    console.error(`Failed to update package.json: ${error}`);
+  }
 }
 
 async function main() {
@@ -106,31 +112,23 @@ async function main() {
   );
 
   // check if paths ok
-  if (!fs.existsSync(templateDir)) {
+  if (!(await fs.access(templateDir).then(() => true).catch(() => false))) {
     console.log(red(`Template ${bold(nodeTemplate)} does not exist`));
     return;
   }
-  if (fs.existsSync(newNodeDir)) {
+  if (await fs.access(newNodeDir).then(() => true).catch(() => false)) {
     console.log(red(`Node ${bold(nodeTypeInKebabCase)} already exists`));
     return;
   }
 
-  // we can do that now
-  console.log(
-    green(
-      `Generating ${bold(nodeTypeInKebabCase)} node using ${bold(
-        nodeTemplate
-      )} template`
-    )
-  );
+  console.log(green(`Generating ${bold(nodeTypeInKebabCase)} node using ${bold(nodeTemplate)} template`));
 
   try {
     await generateFiles(templateDir, newNodeDir);
     await addNodeToPackageJson();
   } catch (e) {
     console.log(red(`Error: ${bold(e)}`));
-    return;
   }
 }
 
-main();
+main().catch(err => console.error(red(`An error occurred: ${err.message}`)));

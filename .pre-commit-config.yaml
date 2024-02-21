@@ -1,0 +1,19 @@
+repos:
+- repo: local
+  hooks:
+  - id: yarn-lint-fix
+    name: Yarn Lint Fix
+    entry: yarn lint:fix
+    language: system
+    # Optional: specify which types of files to run on
+    files: \.(js|jsx|ts|tsx)$
+    stages: [commit]
+
+  - id: yarn-lint
+    name: Yarn Lint
+    entry: yarn lint
+    language: system
+    # Optional: specify which types of files to run on
+    files: \.(js|jsx|ts|tsx)$
+    stages: [commit]
+
