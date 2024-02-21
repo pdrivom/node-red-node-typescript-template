@@ -2,7 +2,10 @@
   "name": "@odt/typescript-template",
   "version": "0.3.0",
   "description": "<Description of the node set here>",
-  "repository": "https://github.com/pdrivom/node-red-node-typescript-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pdrivom/node-red-node-typescript-template"
+  },
   "engines": {
     "node": "^16 || ^18 || ^20"
   },

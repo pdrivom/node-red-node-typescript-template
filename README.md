@@ -111,4 +111,14 @@ yarn dev:docker
 yarn validate
 ```
 
-## [Publishing on npm](https://docs.npmjs.com/cli/v10/using-npm/developers)
+## Configure [Publishing on npm](https://docs.npmjs.com/cli/v10/using-npm/developers)
+
+1. Create [npm token](https://docs.npmjs.com/creating-and-viewing-access-tokens),
+2. Create GitHub [actions secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions),
+3. Add to `.github/workflows/ci.yml` steps:
+
+```
+- run: yarn npm publish
+env:
+    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+```
