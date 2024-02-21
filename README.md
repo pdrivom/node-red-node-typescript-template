@@ -96,19 +96,25 @@ Once you have created a basic node module as described above, you can install it
 To test a node module locally the npm install <folder> command can be used. This allows you to develop the node in a local directory and have it linked into a local node-red install during development.
 
 In your node-red user directory, typically `~/.node-red`, run:
+
 ```
 npm install <location of node module>
 ```
+
 For example, on Mac OS or Linux, if your node is located at `~/dev/node-red-contrib-<example-lower-case>` you would do the following:
+
 ```
 cd ~/.node-red
 npm install ~/dev/node-red-contrib-example-lower-case
 ```
+
 On Windows you would do:
+
 ```
 cd C:\Users\my_name\.node_red
 npm install C:\Users\my_name\Documents\GitHub\node-red-contrib-<example-lower-case<>
 ```
+
 This creates a symbolic link to your node module project directory in ~/.node-red/node_modules so that Node-RED will discover the node when it starts. Any changes to the node’s file can be picked up by simply restarting Node-RED. On Windows, again, using npm 5.x or greater:
 
 > Note : npm will automatically add an entry for your module in the package.json file located in your user directory. If you don't want it to do this, use the --no-save option to the npm install command.
