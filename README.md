@@ -4,6 +4,15 @@ This is a quick-start template repository for creating new Node-RED node sets in
 
 > Consult Node-RED [Documentation](https://nodered.org/docs/creating-nodes/) for further info.
 
+## Template Features
+
+- pre-commit,
+- Linting,
+- Dependencies auto-updates,
+- Yarn command to add/remove nodes folder,
+- Tests on Node v16/18/20,
+- Local Node-RED on docker container.
+
 ## Supported and tested versions
 
 | Node Version | Node-RED version             |
@@ -52,6 +61,14 @@ node-red-node-typescript-starter/
 1. Generate a new GitHub repository by clicking the **`Use this template`** button at the top of the repository homepage.
 2. This project is designed to work with `yarn`. If you don't have `yarn` installed, you can install it with `npm install -g yarn`.
 3. Install dependencies: `yarn install`.
+
+## Using pre-commit
+
+```
+npm install -g pre-commit
+
+pre-commit install
+```
 
 ## Adding Nodes
 
