@@ -1,0 +1,18 @@
+name: Auto Merge Minor Updates
+
+on:
+  pull_request_target:
+
+jobs:
+  auto-merge:
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Auto-merge dependencies
+        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: major
+          github-token: ${{ secrets.AUTO_MERGE_TOKEN }}
