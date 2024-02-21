@@ -1,4 +1,4 @@
-# Node-RED Node TypeScript Starter
+# Node-RED Node TypeScript Template
 
 This is a quick-start template repository for creating new Node-RED node sets in TypeScript.
 
