@@ -1,5 +1,8 @@
 # Node-RED Node TypeScript Template
 
+Forked from: [alexk111/node-red-node-typescript-starter](https://github.com/alexk111/node-red-node-typescript-starter)
+
+
 This is a quick-start template repository for creating new Node-RED node sets in TypeScript.
 
 > Consult Node-RED [Documentation](https://nodered.org/docs/creating-nodes/) for further info.
