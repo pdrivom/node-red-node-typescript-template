@@ -1,5 +1,6 @@
 {
   "name": "node-red-contrib-MY_NODESET_NAME",
+  "type": "module",
   "version": "0.2.3",
   "description": "Description of the node set here",
   "scripts": {
@@ -49,7 +50,7 @@
     "node-red-node-test-helper": "^0.3.3",
     "onchange": "^7.1.0",
     "prettier": "^3.2.5",
-    "rollup": "3.29.4",
+    "rollup": "2.79.0",
     "sinon": "^17.0.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.3.3"
