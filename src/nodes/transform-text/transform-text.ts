@@ -5,7 +5,7 @@ import { TransformTextOperation } from "./shared/types";
 const nodeInit: NodeInitializer = (RED): void => {
   function TransformTextNodeConstructor(
     this: TransformTextNode,
-    config: TransformTextNodeDef
+    config: TransformTextNodeDef,
   ): void {
     RED.nodes.createNode(this, config);
 

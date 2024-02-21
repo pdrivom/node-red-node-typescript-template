@@ -20,6 +20,7 @@ jobs:
       - name: yarn, lint, build and test
         run: |
           yarn
+          yarn lint:fix
           yarn lint
           yarn build
           yarn test

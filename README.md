@@ -39,7 +39,7 @@ node-red-node-typescript-starter/
 
 ## Getting Started
 
-1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage, then clone your new repo. Or you might just clone this repo: `git clone https://github.com/alexk111/node-red-node-typescript-starter.git` and cd into it: `cd node-red-node-typescript-starter`.
+1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage, then clone your new repo.
 2. This project is designed to work with `yarn`. If you don't have `yarn` installed, you can install it with `npm install -g yarn`.
 3. Install dependencies: `yarn install`.
 
@@ -48,25 +48,25 @@ node-red-node-typescript-starter/
 You can quickly scaffold a new node and add it to the node set. Use the following command to create `my-new-node-type` node:
 
 ```
-yarn add-node my-new-node-type
+yarn add-node <my-new-node-type>
 ```
 
 The node generator is based on mustache templates. At the moment there are three templates available:
 
 - `blank` (used by default) - basic node for Node-RED >=1.0
-- `blank-0` - node with a backward compatibility for running on Node-RED <1.0
+- `blank-0` - node with a backward compatibility for running on Node-RED **(not recommended)** <1.0
 - `config` - configuration node
 
 To generate a node using a template, specify it as the third argument:
 
 ```
-yarn add-node my-new-node-type blank
+yarn add-node <my-new-node-type> blank
 ```
 
 or
 
 ```
-yarn add-node my-new-node-config config
+yarn add-node <my-new-node-config> config
 ```
 
 ### Adding Node Templates
@@ -89,25 +89,26 @@ Create a production build:
 yarn build
 ```
 
-## Backers 💝
-
-[[Become a backer](https://mynode.alexkaul.com/gh-donate)]
-
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/0/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/0/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/1/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/1/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/2/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/2/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/3/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/3/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/4/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/4/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/5/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/5/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/6/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/6/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/7/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/7/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/8/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/8/profile)
-[![Backer](https://mynode.alexkaul.com/gh-backer/top/9/avatar/60)](https://mynode.alexkaul.com/gh-backer/top/9/profile)
-
 ## Testing Node Set in Node-RED
 
-[Read Node-RED docs](https://nodered.org/docs/creating-nodes/first-node#testing-your-node-in-node-red) on how to install the node set into your Node-RED runtime.
+Once you have created a basic node module as described above, you can install it into your Node-RED runtime.
 
-## License
+To test a node module locally the npm install <folder> command can be used. This allows you to develop the node in a local directory and have it linked into a local node-red install during development.
 
-MIT © Alex Kaul
+In your node-red user directory, typically `~/.node-red`, run:
+```
+npm install <location of node module>
+```
+For example, on Mac OS or Linux, if your node is located at `~/dev/node-red-contrib-<example-lower-case>` you would do the following:
+```
+cd ~/.node-red
+npm install ~/dev/node-red-contrib-example-lower-case
+```
+On Windows you would do:
+```
+cd C:\Users\my_name\.node_red
+npm install C:\Users\my_name\Documents\GitHub\node-red-contrib-<example-lower-case<>
+```
+This creates a symbolic link to your node module project directory in ~/.node-red/node_modules so that Node-RED will discover the node when it starts. Any changes to the node’s file can be picked up by simply restarting Node-RED. On Windows, again, using npm 5.x or greater:
+
+> Note : npm will automatically add an entry for your module in the package.json file located in your user directory. If you don't want it to do this, use the --no-save option to the npm install command.
