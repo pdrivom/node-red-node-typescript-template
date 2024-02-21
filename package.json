@@ -17,7 +17,7 @@
     "build:editor:watch": "rollup -c rollup.config.editor.js -w",
     "build:runtime": "tsc -p tsconfig.runtime.json",
     "build:runtime:watch": "tsc -p tsconfig.runtime.watch.json --watch --preserveWatchOutput",
-    "build": "rm -rf dist && yarn copy && yarn build:editor && yarn build:runtime",
+    "build": "rm -rf dist && yarn copy && yarn build:editor && yarn build:runtime && yarn validate",
     "build:docker": "docker compose build",
     "build:ci": "yarn build && yarn build:docker",
     "test": "jest --forceExit --detectOpenHandles --colors",
