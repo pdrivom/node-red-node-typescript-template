@@ -49,7 +49,7 @@ node-red-node-typescript-starter/
 
 ## Getting Started
 
-1. Generate a new GitHub repository by clicking the `Use this template` button at the top of the repository homepage.
+1. Generate a new GitHub repository by clicking the **`Use this template`** button at the top of the repository homepage.
 2. This project is designed to work with `yarn`. If you don't have `yarn` installed, you can install it with `npm install -g yarn`.
 3. Install dependencies: `yarn install`.
 
