@@ -2,7 +2,6 @@
 
 Forked from: [alexk111/node-red-node-typescript-starter](https://github.com/alexk111/node-red-node-typescript-starter)
 
-
 This is a quick-start template repository for creating new Node-RED node sets in TypeScript.
 
 > Consult Node-RED [Documentation](https://nodered.org/docs/creating-nodes/) for further info.
@@ -23,6 +22,8 @@ This is a quick-start template repository for creating new Node-RED node sets in
 | 20.x         | Node-RED 3.x or earlier only |
 | 18.x         | Node-RED 3.x or earlier only |
 | 16.x         | Node-RED 3.x or earlier only |
+
+> :warning: Development using **Node v16**
 
 ## Project Structure
 
