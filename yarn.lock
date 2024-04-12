@@ -627,13 +627,13 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@node-red/editor-api@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/editor-api/-/editor-api-3.1.8.tgz#823fe0c63e73c070d7d62e65f81c3527a2642a42"
-  integrity sha512-zi64uwt+L3bEgKuNEWT+v1YQ+70z5urDbdrmxgsY+Wc0RcC10NRPKZeNJFBgvrourT4r2hyABkfdcrXW9umomw==
+"@node-red/editor-api@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/editor-api/-/editor-api-3.1.9.tgz#ddee7daa54999606cfc2e0ddb3e844e5a8fa3eb4"
+  integrity sha512-HHhFiwxmD8V5+U/xe+Gl9T0oAnwFeA7zisG8VW+Ruh3apGQvV9l5UoL9Yg00jEPDOhL99k/wqcXI42lakEkiKw==
   dependencies:
-    "@node-red/editor-client" "3.1.8"
-    "@node-red/util" "3.1.8"
+    "@node-red/editor-client" "3.1.9"
+    "@node-red/util" "3.1.9"
     bcryptjs "2.4.3"
     body-parser "1.20.2"
     clone "2.1.2"
@@ -652,15 +652,15 @@
   optionalDependencies:
     bcrypt "5.1.0"
 
-"@node-red/editor-client@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/editor-client/-/editor-client-3.1.8.tgz#07d55a20fa28cad77ac0bb7c38a0025609e72628"
-  integrity sha512-Que3mPdtBZJHB5rkkzS85EJxMZ/pIKq1a0SDul+ZIpC6o4xWUpuv+NSZNOT9zqyfOA73BGJ28z75WOJSmoSmuQ==
+"@node-red/editor-client@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/editor-client/-/editor-client-3.1.9.tgz#fc8edf3fc67a15edc407784f62618d69aa1eb1d6"
+  integrity sha512-k8ik9fqcUxwsjEL0bBywNRYoFk7VZxdcoXRKCtcB3H8T/KRgQBDZu4j27dtff/5WPqnvtmXOQBbdDrhluMO0ng==
 
-"@node-red/nodes@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/nodes/-/nodes-3.1.8.tgz#00c4ae2f033600464b2f5ba066c7e6b6f9620e1f"
-  integrity sha512-A0RrpJHNz8nzf4Vwa5JcfSn9msxu7izHSaGLdSeGiB2HpUGCKXt9IM11gC8PgI2/IeSrQV1b1qUNQHYFk9hxBw==
+"@node-red/nodes@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/nodes/-/nodes-3.1.9.tgz#72f8213e17bb55c9e96bd72073ee974e3adf5d32"
+  integrity sha512-H0ZJjgmc7tbDBExF8WWIab7VJ1PBJxqExc6HWfb5FJQcOyA9mzCXwBduirWGxWAbQzZvq5GLgzy5ECzDJIjbSQ==
   dependencies:
     acorn "8.8.2"
     acorn-walk "8.2.0"
@@ -694,35 +694,35 @@
     ws "7.5.6"
     xml2js "0.6.2"
 
-"@node-red/registry@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/registry/-/registry-3.1.8.tgz#c86d46b4baeb149076366e6cf2ba3377ba394692"
-  integrity sha512-pxppjKvYCFH3j6TNMcsJcNaawZyfqfk5749qrOlDL5wPnvD8FciugYLjtTJshxwpDp3mYADHRRFD/z85sfVv6Q==
+"@node-red/registry@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/registry/-/registry-3.1.9.tgz#debc8560ca188b06a60f5ea89dba56f9a520cf55"
+  integrity sha512-lm1jNGO5ebax5kw5A2stOymMVQpuAGJ24M+3bfPYj3djzgBq4qKbNX6EAJLtyLHlCKecAybJoXDNpNcCnl7BXQ==
   dependencies:
-    "@node-red/util" "3.1.8"
+    "@node-red/util" "3.1.9"
     clone "2.1.2"
     fs-extra "11.1.1"
     semver "7.5.4"
-    tar "6.1.13"
+    tar "6.2.1"
     uglify-js "3.17.4"
 
-"@node-red/runtime@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/runtime/-/runtime-3.1.8.tgz#514f62e1c9d8f9548d7e1b0e90abca33ed88fc3b"
-  integrity sha512-KnYSCLcsGVgAzSynZBYjUF0bGN/6F2DgIP6LZqJTfwe83szqgdFqSV1hztf2WeAulI9M/r2MkWp4EjpWwz5rRg==
+"@node-red/runtime@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/runtime/-/runtime-3.1.9.tgz#f1ca61e9770189efaa425d201898e7ded66cee87"
+  integrity sha512-tpuHE5gEqLx9OoRjSxsyh683yGCnBlAAwbjkVv5lonqYqLJwE3DCJnMuHYj1lPUDzSc0QzhE9efm+LIhAhBU4g==
   dependencies:
-    "@node-red/registry" "3.1.8"
-    "@node-red/util" "3.1.8"
+    "@node-red/registry" "3.1.9"
+    "@node-red/util" "3.1.9"
     async-mutex "0.4.0"
     clone "2.1.2"
     express "4.19.2"
     fs-extra "11.1.1"
     json-stringify-safe "5.0.1"
 
-"@node-red/util@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@node-red/util/-/util-3.1.8.tgz#3dc0f1ada606535f90324eb5fabf306fc609aa64"
-  integrity sha512-/+1XPAVpQjZ3pgsguOAcl30kZjN6+q6WpHn8dWEAaKIjO8q6q/y4FawuIGGwgUnI9RDBk0LWz9wDQDJ9+uE2nA==
+"@node-red/util@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@node-red/util/-/util-3.1.9.tgz#bd55daaca3d3f4b0b319bf7a46ccaa835ff730b2"
+  integrity sha512-BT7mMds8MFrXwgGuNjmk/vY0X621hirLcqAOp5/ZrrFuzPVoK4PDgoNx5igYD/HVQbVcJTHfN1cRopSFPfdF2Q==
   dependencies:
     fs-extra "11.1.1"
     i18next "21.10.0"
@@ -4909,11 +4909,6 @@ minipass@^3.0.0:
   dependencies:
     yallist "^4.0.0"
 
-minipass@^4.0.0:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-4.2.8.tgz#f0010f64393ecfc1d1ccb5f582bcaf45f48e1a3a"
-  integrity sha512-fNzuVyifolSLFL4NzpF+wEF4qrgqaaKX0haXPQEdQ7NKAN+WecoKMHV09YcuL/DHxrUsYQOK3MiuDf7Ip2OXfQ==
-
 minipass@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-5.0.0.tgz#3e9788ffb90b694a5d0ec94479a45b5d8738133d"
@@ -5128,15 +5123,15 @@ node-red-node-test-helper@^0.3.3:
     stoppable "^1.1.0"
     supertest "^6.3.3"
 
-node-red@^3.1.8:
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/node-red/-/node-red-3.1.8.tgz#c87445669b3d8d187ad194e07f549200637f0fe3"
-  integrity sha512-8ydf6aysdVqilTWUPU3zYMz/kQDnGh7+3ugO3zuSqMX3BaHrw4Eb/vagTWL2LppVkqIG5GWRRJCyFKqKtMXIKQ==
+node-red@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/node-red/-/node-red-3.1.9.tgz#4774f8cab7124ac89d8d548e35f08c03c2c04d07"
+  integrity sha512-SNuXZoplH/UewibVbe/UPyMhsmeuoCGjDVmBmWo+Wj8arE14PF1cOoTKdnbv5F/vPc1kbUvd0+oWCm9kv7wfkw==
   dependencies:
-    "@node-red/editor-api" "3.1.8"
-    "@node-red/nodes" "3.1.8"
-    "@node-red/runtime" "3.1.8"
-    "@node-red/util" "3.1.8"
+    "@node-red/editor-api" "3.1.9"
+    "@node-red/nodes" "3.1.9"
+    "@node-red/runtime" "3.1.9"
+    "@node-red/util" "3.1.9"
     basic-auth "2.0.1"
     bcryptjs "2.4.3"
     express "4.19.2"
@@ -6667,14 +6662,14 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tar@6.1.13:
-  version "6.1.13"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.13.tgz#46e22529000f612180601a6fe0680e7da508847b"
-  integrity sha512-jdIBIN6LTIe2jqzay/2vtYLlBHa3JF42ot3h1dW8Q0PaAG4v8rm0cvpVePtau5C6OKXGGcgO9q2AMNSWxiLqKw==
+tar@6.2.1:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.2.1.tgz#717549c541bc3c2af15751bea94b1dd068d4b03a"
+  integrity sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
-    minipass "^4.0.0"
+    minipass "^5.0.0"
     minizlib "^2.1.1"
     mkdirp "^1.0.3"
     yallist "^4.0.0"
