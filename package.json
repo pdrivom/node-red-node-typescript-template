@@ -60,7 +60,7 @@
     "node-red-dev": "^0.1.6",
     "node-red-node-test-helper": "^0.3.3",
     "prettier": "^3.2.5",
-    "rollup": "2.79.0",
+    "rollup": "4.16.3",
     "sinon": "^17.0.1",
     "ts-jest": "^29.1.2",
     "typescript": "^5.4.5"
