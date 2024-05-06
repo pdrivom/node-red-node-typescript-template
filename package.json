@@ -58,7 +58,7 @@
     "mustache": "^4.2.0",
     "node-red": "^3.1.9",
     "node-red-dev": "^0.1.6",
-    "node-red-node-test-helper": "^0.3.3",
+    "node-red-node-test-helper": "^0.3.4",
     "prettier": "^3.2.5",
     "rollup": "2.79.0",
     "sinon": "^17.0.1",
