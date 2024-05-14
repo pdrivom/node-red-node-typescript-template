@@ -46,7 +46,7 @@
     "@types/node-red-node-test-helper": "^0.3.4",
     "@types/sinon": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@typescript-eslint/parser": "^7.9.0",
     "colorette": "^2.0.20",
     "concurrently": "^8.2.2",
     "copyfiles": "^2.4.1",
