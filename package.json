@@ -62,7 +62,7 @@
     "prettier": "^3.3.2",
     "rollup": "2.79.0",
     "sinon": "^18.0.0",
-    "ts-jest": "^29.1.4",
+    "ts-jest": "^29.1.5",
     "typescript": "^5.4.5"
   },
   "jest": {
